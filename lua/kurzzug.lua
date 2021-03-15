@@ -137,10 +137,10 @@ local theme = lush(function()
     Macro       { PreProc }, --    same as Define
     PreCondit   { PreProc }, --  preprocessor #if, #else, #endif, etc.
 
-    Special        { fg = anthracite.lighten(20) }, -- (preferred) any special symbol
+    Special        { fg = String.fg.lighten(50) }, -- (preferred) any special symbol
     SpecialChar    { Special }, --  special character in a constant
     Tag            { Special }, --    you can use CTRL-] on this
-    Delimiter      { Special },
+    Delimiter      { fg = anthracite.lighten(20) },
     SpecialComment { Special }, -- special things inside a comment
     Debug          { Special }, --    debugging statements
 
