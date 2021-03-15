@@ -10,8 +10,15 @@ A BVG-inspired vim colorscheme created with [Lush](https://github.com/rktjmp/lus
 
 ## Installation
 
+If you wanted to do it manually for the vimscript version you merely need to
+have `kurzzug.vim` in your `.../[n]vim/colors`, for the lush-version in lua
+you'd need `kurzzug.lua` in `.../nvim/lua`.
+
+Your plugin manager of choice should work, e.g. for
+[vim-plug](https://github.com/junegunn/vim-plug):
+
 ```
-TODO
+Plug 'ja-he/kurzzug'
 ```
 
 ## Usage
