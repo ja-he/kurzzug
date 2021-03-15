@@ -62,7 +62,6 @@ local theme = lush(function()
     Tabline       { LineNr },
     TablineSel    { CursorLineNr },
     TablineFill   { VertSplit },
-    Title         { StatusLineNC },
 
     -- "Above the text"
     Visual        { bg = bvg_yellow, fg = black },
@@ -70,8 +69,10 @@ local theme = lush(function()
     IncSearch     { bg = Search.bg.lighten(30), gui = "bold,underline" },
 
     -- Invisible text
+    Conceal       { fg = bvg_yellow }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Whitespace    { fg = anthracite },
-    Conceal       { }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Folded        { Whitespace }, -- line used for closed folds
+    NonText       { Whitespace }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
     -- More default stuff:
     Directory     { }, -- directory names (and other special names in listings)
@@ -81,7 +82,6 @@ local theme = lush(function()
     DiffText      { bg = DiffChange.bg.lighten(20) }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer   { }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg      { fg = red_base.lighten(40), bg = red_base.darken(60) }, -- error messages on the command line
-    Folded        { Whitespace }, -- line used for closed folds
     FoldColumn    { Whitespace }, -- 'foldcolumn'
     SignColumn    { }, -- column where |signs| are displayed
     Substitute    { }, -- |:substitute| replacement text highlighting
@@ -90,7 +90,6 @@ local theme = lush(function()
     MsgArea       { }, -- Area for messages and cmdline
     MsgSeparator  { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg       { }, -- |more-prompt|
-    NonText       { Whitespace }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Pmenu         { bg = black , fg = inactive_display_text }, -- Popup menu: normal item.
     PmenuSel      { bg = black , fg = display_text }, -- Popup menu: selected item.
     PmenuSbar     { bg = black }, -- Popup menu: scrollbar.
@@ -145,9 +144,10 @@ local theme = lush(function()
     SpecialComment { Special }, -- special things inside a comment
     Debug          { Special }, --    debugging statements
 
-    Underlined { gui = "underline" }, -- (preferred) text that stands out, HTML links
-    Bold       { gui = "bold" },
-    Italic     { gui = "italic" },
+    Title         { fg = bvg_yellow, gui = "bold" },
+    Underlined    { gui = "underline" }, -- (preferred) text that stands out, HTML links
+    Bold          { gui = "bold" },
+    Italic        { gui = "italic" },
 
     -- ("Ignore", below, may be invisible...)
     -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
