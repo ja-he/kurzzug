@@ -6,9 +6,7 @@ A BVG-inspired vim colorscheme created with [Lush](https://github.com/rktjmp/lus
 
 ## Screenshots
 
-<img src="img/c.png" alt="C Highlighting Demo (TS on)" height="300px">
-<img src="img/md.png" alt="Markdown Highlighting Demo (using vim-pandoc-syntax)" height="300px">
-<img src="img/palette.png" alt="Palette Preview" height="300px">
+<img src="img/c.png" alt="C Highlighting Demo (TS on)" height="300px"><img src="img/md.png" alt="Markdown Highlighting Demo (using vim-pandoc-syntax)" height="300px"><img src="img/palette.png" alt="Palette Preview" height="300px">
 
 ## Installation
 
