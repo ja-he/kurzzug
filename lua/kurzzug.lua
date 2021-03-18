@@ -161,29 +161,29 @@ local theme = lush(function()
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
 
-    -- LspReferenceText                     { }, -- used for highlighting "text" references
-    -- LspReferenceRead                     { }, -- used for highlighting "read" references
-    -- LspReferenceWrite                    { }, -- used for highlighting "write" references
+    LspReferenceText                     { fg = red_base.lighten(20) }, -- used for highlighting "text" references
+    LspReferenceRead                     { fg = red_base.lighten(20) }, -- used for highlighting "read" references
+    LspReferenceWrite                    { fg = red_base.lighten(20) }, -- used for highlighting "write" references
 
-    -- LspDiagnosticsDefaultError           { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    -- LspDiagnosticsDefaultWarning         { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    -- LspDiagnosticsDefaultInformation     { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    -- LspDiagnosticsDefaultHint            { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    -- LspDiagnosticsDefaultError           { fg = red_base.darken(60)   }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    -- LspDiagnosticsDefaultWarning         { fg = orange_base.darken(60)}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    -- LspDiagnosticsDefaultInformation     { fg = blue_base.darken(60)  }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    -- LspDiagnosticsDefaultHint            { fg = green_base.darken(60) }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-    -- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
-    -- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
-    -- LspDiagnosticsVirtualTextInformation { }, -- Used for "Information" diagnostic virtual text
-    -- LspDiagnosticsVirtualTextHint        { }, -- Used for "Hint" diagnostic virtual text
+    LspDiagnosticsVirtualTextError       { fg = red_base.darken(60)    }, -- Used for "Error" diagnostic virtual text
+    LspDiagnosticsVirtualTextWarning     { fg = orange_base.darken(60) }, -- Used for "Warning" diagnostic virtual text
+    LspDiagnosticsVirtualTextInformation { fg = blue_base.darken(60)   }, -- Used for "Information" diagnostic virtual text
+    LspDiagnosticsVirtualTextHint        { fg = green_base.darken(60)  }, -- Used for "Hint" diagnostic virtual text
 
-    -- LspDiagnosticsUnderlineError         { }, -- Used to underline "Error" diagnostics
-    -- LspDiagnosticsUnderlineWarning       { }, -- Used to underline "Warning" diagnostics
-    -- LspDiagnosticsUnderlineInformation   { }, -- Used to underline "Information" diagnostics
-    -- LspDiagnosticsUnderlineHint          { }, -- Used to underline "Hint" diagnostics
+    LspDiagnosticsUnderlineError         { fg = LspDiagnosticsVirtualTextError.fg.lighten(20) , gui = "underline" }, -- Used to underline "Error" diagnostics
+    LspDiagnosticsUnderlineWarning       { fg = LspDiagnosticsVirtualTextWarning.fg.lighten(20) , gui = "underline" }, -- Used to underline "Warning" diagnostics
+    LspDiagnosticsUnderlineInformation   { fg = LspDiagnosticsVirtualTextInformation.fg.lighten(20) , gui = "underline" }, -- Used to underline "Information" diagnostics
+    LspDiagnosticsUnderlineHint          { fg = LspDiagnosticsVirtualTextHint.fg.lighten(20) , gui = "underline" }, -- Used to underline "Hint" diagnostics
 
-    -- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
-    -- LspDiagnosticsFloatingHint           { }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    LspDiagnosticsFloatingError          { bg = Normal.fg, bg = LspDiagnosticsVirtualTextError.fg }, -- Used to color "Error" diagnostic messages in diagnostics float
+    LspDiagnosticsFloatingWarning        { bg = Normal.fg, bg = LspDiagnosticsVirtualTextWarning.fg }, -- Used to color "Warning" diagnostic messages in diagnostics float
+    LspDiagnosticsFloatingInformation    { bg = Normal.fg, bg = LspDiagnosticsVirtualTextInformation.fg }, -- Used to color "Information" diagnostic messages in diagnostics float
+    LspDiagnosticsFloatingHint           { bg = Normal.fg, bg = LspDiagnosticsVirtualTextHint.fg }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
     -- LspDiagnosticsSignError              { }, -- Used for "Error" signs in sign column
     -- LspDiagnosticsSignWarning            { }, -- Used for "Warning" signs in sign column
