@@ -29,6 +29,7 @@ local black                 = hsl("#000000")
 local green_base            = hsl(100,40,50)
 local red_base              = hsl(0,40,50)
 local orange_base           = hsl(40,60,50)
+local blue_base             = hsl(210,40,50)
 
 local theme = lush(function()
   return {
