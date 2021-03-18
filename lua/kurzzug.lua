@@ -39,7 +39,7 @@ local theme = lush(function()
 
     -- Normal text
     Normal        { bg = black, fg = white },
-    NormalFloat   { Normal }, -- Normal text in floating windows.
+    NormalFloat   { Normal, bg = Normal.bg.lighten(5) }, -- Normal text in floating windows.
     NormalNC      { Normal }, -- normal text in non-current windows
 
     -- Line Numbers
@@ -91,9 +91,9 @@ local theme = lush(function()
     MsgArea       { }, -- Area for messages and cmdline
     MsgSeparator  { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg       { }, -- |more-prompt|
-    Pmenu         { bg = black , fg = inactive_display_text }, -- Popup menu: normal item.
-    PmenuSel      { bg = black , fg = display_text }, -- Popup menu: selected item.
-    PmenuSbar     { bg = black }, -- Popup menu: scrollbar.
+    Pmenu         { bg = NormalFloat.bg , fg = inactive_display_text }, -- Popup menu: normal item.
+    PmenuSel      { bg = Pmenu.bg       , fg = display_text }, -- Popup menu: selected item.
+    PmenuSbar     { bg = Pmenu.bg }, -- Popup menu: scrollbar.
     PmenuThumb    { bg = inactive_display_text }, -- Popup menu: Thumb of the scrollbar.
     Question      { }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine  { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
