@@ -243,8 +243,10 @@ local theme = lush(function()
     -- TSVariableBuiltin    { }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- Plugins
+
       -- scrollview
       ScrollView { bg = inactive_display_text },
+
       -- fugitive
       diffRemoved               { DiffDelete, fg = DiffDelete.fg.lighten(50)  },
       diffAdded                 { DiffAdd },
@@ -287,6 +289,17 @@ local theme = lush(function()
       -- fugitiveUnstagedSection  {},
       -- fugitiveStagedHeading    {},
       -- fugitiveStagedSection    {},
+
+      -- WhichKey
+      WhichKey          { gui = "bold" },
+      WhichKeySeperator { Pmenu },
+      WhichKeyGroup     { Pmenu , gui = "italic" },
+      WhichKeyDesc      { PmenuSel , gui = "italic" },
+      WhichKeyFloating  { PmenuSel },
+
+
+
+
   }
 end)
 
