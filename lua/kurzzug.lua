@@ -35,7 +35,6 @@ local theme = lush(function()
   return {
 
     -- Helper definitions to inherit from:
-    -- TODO
 
     -- Normal text
     Normal        { bg = black, fg = white },
@@ -108,6 +107,7 @@ local theme = lush(function()
 
     -- Code and markup
     Comment     { fg = light_grey },
+    Todo        { fg = u7 },
 
     Constant    { fg = sand },
     String      { Constant },
@@ -155,7 +155,6 @@ local theme = lush(function()
 
     -- Error          { }, -- (preferred) any erroneous construct
 
-    -- Todo           { }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
