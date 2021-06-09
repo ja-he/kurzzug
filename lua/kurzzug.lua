@@ -51,8 +51,8 @@ local theme = lush(function()
     CursorIM      { }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorLine    { bg = Normal.bg.lighten(5) },
     CursorColumn  { CursorLine },
-    TermCursor    { Cursor }, -- cursor in a focused terminal
-    TermCursorNC  { Cursor }, -- cursor in an unfocused terminal
+    TermCursor    { bg = white, fg = black }, -- cursor in a focused terminal
+    TermCursorNC  { bg = TermCursor.bg.darken(40) }, -- cursor in an unfocused terminal
 
     -- UI
     ColorColumn   { CursorLine }, -- used for the columns set with 'colorcolumn'
