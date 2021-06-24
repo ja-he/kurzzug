@@ -37,8 +37,8 @@ local theme = lush(function()
     -- Helper definitions to inherit from:
 
     -- Normal text
-    Normal        { bg = black, fg = white },
-    NormalFloat   { Normal, bg = Normal.bg.lighten(5) }, -- Normal text in floating windows.
+    Normal        { fg = white },
+    NormalFloat   { Normal }, -- Normal text in floating windows.
     NormalNC      { Normal }, -- normal text in non-current windows
 
     -- Line Numbers
@@ -49,7 +49,7 @@ local theme = lush(function()
     Cursor        { }, -- character under the cursor
     lCursor       { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM      { }, -- like Cursor, but used when in IME mode |CursorIM|
-    CursorLine    { bg = Normal.bg.lighten(5) },
+    CursorLine    { bg = black.lighten(5) },
     CursorColumn  { CursorLine },
     TermCursor    { bg = white, fg = black }, -- cursor in a focused terminal
     TermCursorNC  { bg = TermCursor.bg.darken(40) }, -- cursor in an unfocused terminal
