@@ -38,7 +38,7 @@ local theme = lush(function()
 
     -- Normal text
     Normal        { fg = white },
-    NormalFloat   { Normal }, -- Normal text in floating windows.
+    NormalFloat   { Normal , bg = anthracite.darken(50) }, -- Normal text in floating windows.
     NormalNC      { Normal }, -- normal text in non-current windows
 
     -- Line Numbers
