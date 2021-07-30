@@ -300,8 +300,9 @@ local theme = lush(function()
       WhichKeyDesc      { PmenuSel , gui = "italic" },
       WhichKeyFloating  { PmenuSel },
 
-
-
+      -- Floaterm
+      Floaterm { bg = NormalFloat.bg },
+      FloatermBorder { NormalFloat },
 
   }
 end)
