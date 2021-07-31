@@ -28,6 +28,10 @@ local turmstr               = hsl("#6fc7d3")
 local white                 = hsl("#ffffff")
 local black                 = hsl("#000000")
 
+local medium_bg             = anthracite
+local dark_bg               = medium_bg.darken(50)
+local light_bg              = medium_bg.lighten(40)
+
 local green_base            = hsl(100,40,50)
 local red_base              = hsl(0,40,50)
 local orange_base           = hsl(40,60,50)
@@ -42,7 +46,7 @@ local theme = lush(function()
 
     -- Normal text
     Normal        { fg = white },
-    NormalFloat   { Normal , bg = anthracite.darken(50) }, -- Normal text in floating windows.
+    NormalFloat   { Normal , bg = dark_bg }, -- Normal text in floating windows.
     NormalNC      { Normal }, -- normal text in non-current windows
 
     -- Line Numbers
@@ -60,16 +64,16 @@ local theme = lush(function()
 
     -- UI
     ColorColumn   { CursorLine }, -- used for the columns set with 'colorcolumn'
-    StatusLine    { CursorLineNr },
-    StatusLineNC  { LineNr },
+    StatusLine    { CursorLineNr , bg = medium_bg },
+    StatusLineNC  { LineNr , bg = dark_bg },
     VertSplit     { fg = inactive_display_text },
-    Tabline       { LineNr },
-    TablineSel    { CursorLineNr },
+    Tabline       { LineNr , bg = dark_bg },
+    TablineSel    { CursorLineNr , bg = medium_bg },
     TablineFill   { VertSplit },
 
     -- "Above the text"
     Visual        { bg = bvg_yellow, fg = black },
-    Search        { bg = anthracite , gui = "bold,underline"},
+    Search        { bg = anthracite , gui = "bold,underline"}, -- TODO: color
     IncSearch     { bg = Search.bg.lighten(30), gui = "bold,underline" },
 
     -- Invisible text
@@ -111,7 +115,7 @@ local theme = lush(function()
 
     -- Code and markup
     Comment     { fg = light_grey },
-    Todo        { fg = u7 },
+    Todo        { fg = magenta },
 
     Constant    { fg = sand },
     String      { Constant },
