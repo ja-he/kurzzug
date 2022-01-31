@@ -98,7 +98,7 @@ local theme = lush(function()
     FoldColumn    { Whitespace }, -- 'foldcolumn'
     SignColumn    { }, -- column where |signs| are displayed
     Substitute    { }, -- |:substitute| replacement text highlighting
-    MatchParen    { fg = bvg_yellow }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen    { fg = turmstr }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg       { fg = inactive_display_text }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea       { }, -- Area for messages and cmdline
     MsgSeparator  { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
