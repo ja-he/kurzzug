@@ -46,8 +46,10 @@ local theme = lush(function()
 
     -- Normal text
     Normal        { fg = white },
-    NormalFloat   { Normal , bg = dark_bg }, -- Normal text in floating windows.
     NormalNC      { Normal }, -- normal text in non-current windows
+
+    NormalFloat   { Normal , bg = dark_bg }, -- Normal text in floating windows.
+    FloatBorder   { NormalFloat },
 
     -- Line Numbers
     CursorLineNr  { fg = display_text , gui = "bold" },
