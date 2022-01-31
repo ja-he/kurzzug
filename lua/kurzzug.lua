@@ -38,6 +38,7 @@ local orange_base           = hsl(40,60,50)
 local blue_base             = hsl(210,40,50)
 
 local magenta               = hsl(321,25,55)
+local bright_red            = hsl('#b00000')
 
 local theme = lush(function()
   return {
@@ -91,7 +92,9 @@ local theme = lush(function()
     DiffDelete    { bg = red_base.darken(60) , fg = red_base.darken(50) }, -- diff mode: Deleted line |diff.txt|
     DiffText      { bg = DiffChange.bg.lighten(20) }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer   { }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    ErrorMsg      { fg = red_base.lighten(40), bg = red_base.darken(60) }, -- error messages on the command line
+    Ignore        { Whitespace }, -- (preferred) left blank, hidden  |hl-Ignore|
+    Error         { fg = white , bg = bright_red }, -- (preferred) any erroneous construct
+    ErrorMsg      { Error }, -- error messages on the command line
     FoldColumn    { Whitespace }, -- 'foldcolumn'
     SignColumn    { }, -- column where |signs| are displayed
     Substitute    { }, -- |:substitute| replacement text highlighting
