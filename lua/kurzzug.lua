@@ -75,8 +75,8 @@ local theme = lush(function()
 
     -- "Above the text"
     Visual        { bg = bvg_yellow, fg = black },
-    Search        { bg = anthracite , gui = "bold,underline"}, -- TODO: color
-    IncSearch     { bg = Search.bg.lighten(30), gui = "bold,underline" },
+    Search        { bg = light_bg , fg = black }, -- TODO: color
+    IncSearch     { Search , gui = "bold,underline" },
 
     -- Invisible text
     Conceal       { fg = bvg_yellow }, -- placeholder characters substituted for concealed text (see 'conceallevel')
