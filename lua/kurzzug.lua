@@ -309,6 +309,26 @@ local theme = lush(function()
       WhichKeyDesc      { PmenuSel , gui = "italic" },
       WhichKeyFloating  { PmenuSel },
 
+      -- telescope
+      TelescopeNormal         { Pmenu },
+      TelescopeBorder         { fg = TelescopeNormal.bg, bg = TelescopeNormal.bg },
+      TelescopeNormalBorder   { TelescopeNormal },
+      TelescopeSelection      { PmenuSel },
+      TelescopeSelectionCaret { TelescopeSelection, fg = TelescopeSelection.bg.lighten(60) , gui = 'bold' },
+      TelescopeTitle          { fg = TelescopeNormal.bg.lighten(70), bg = TelescopeNormal.bg.lighten(20) , gui = "italic"},
+      TelescopeMatching       { fg = TelescopeSelection.bg, bg = TelescopeSelection.fg , gui = "bold"},
+
+      TelescopePromptNormal   { fg = black, bg = bvg_yellow , gui = 'bold' },
+      TelescopePromptBorder   { fg = TelescopePromptNormal.bg, bg = TelescopePromptNormal.bg },
+      TelescopePromptTitle    { fg = TelescopePromptNormal.bg.darken(70), bg = TelescopePromptNormal.bg.lighten(20), gui = "italic" },
+      TelescopePromptCounter  { fg = TelescopePromptNormal.bg.darken(70) },
+      TelescopePromptPrefix   { TelescopePromptCounter, gui = 'bold' },
+
+      TelescopePreviewNormal  { fg = Normal.fg.darken(30), bg = TelescopeNormal.bg.darken(50) },
+      TelescopePreviewBorder  { TelescopePreviewNormal },
+      TelescopePreviewTitle   { fg = TelescopePreviewNormal.bg.darken(70), bg = TelescopePreviewNormal.bg.darken(20), gui = "italic" },
+      TelescopePreviewMessage { fg = TelescopePreviewNormal.bg.darken(40) },
+
       -- Floaterm
       Floaterm { bg = NormalFloat.bg },
       FloatermBorder { NormalFloat },
