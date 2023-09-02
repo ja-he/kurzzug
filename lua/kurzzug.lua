@@ -333,6 +333,10 @@ local theme = lush(function()
       Floaterm { bg = NormalFloat.bg },
       FloatermBorder { NormalFloat },
 
+      CmpItemKindDefault  { fg = sand },
+      CmpItemKindCopilot  { fg = u9 },
+      CmpItemKindText     { fg = anthracite },
+      CmpGhostText        { fg = turmstr },
   }
 end)
 
