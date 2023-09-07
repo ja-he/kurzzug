@@ -129,21 +129,21 @@ local theme = lush(function()
     Boolean     { Constant }, --  a boolean constant: TRUE, false
     Float       { Number }, --    a floating point constant: 2.3e10
 
-    Identifier  { fg = bvg_yellow , gui = "bold"},
-    Function    { Identifier }, -- function name (also: methods for classes)
+    Identifier  { fg = bvg_yellow.lighten(20)  },
+    Function    { fg = Identifier.fg.darken(30) , gui = "bold" }, -- function name (also: methods for classes)
 
     Statement   { fg = white, gui = "bold,italic" },
-    Keyword     { fg = white, gui = "italic" },
+    Keyword     { fg = light_grey.lighten(50), gui = "italic" },
     Conditional { Keyword }, --  if, then, else, endif, switch, etc.
     Repeat      { Keyword }, --   for, do, while, etc.
     Label       { Keyword }, --    case, default, etc.
     Operator    { fg = light_grey }, -- "sizeof", "+", "*", etc.
     Exception   { Keyword }, --  try, catch, throw
 
-    Type        { gui = "underline" },
-    StorageClass{ Type }, -- static, register, volatile, etc.
-    Structure   { Type }, --  struct, union, enum, etc.
-    Typedef     { Type }, --  A typedef
+    Type        { fg = color_04.lighten(20) },
+    StorageClass{ fg = Type.fg }, -- static, register, volatile, etc.
+    Structure   { fg = Type.fg.darken(20) }, --  struct, union, enum, etc.
+    Typedef     { fg = Type.fg.darken(20), gui = 'bold' }, --  A typedef
 
     PreProc     { fg = color_08.lighten(20) },
     Include     { PreProc }, --  preprocessor #include
