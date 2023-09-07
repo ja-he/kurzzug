@@ -145,6 +145,8 @@ local theme = lush(function()
     Structure   { fg = Type.fg.darken(20) }, --  struct, union, enum, etc.
     Typedef     { fg = Type.fg.darken(20), gui = 'bold' }, --  A typedef
 
+    Noise { fg = Whitespace.fg.lighten(60) },
+
     PreProc     { fg = color_08.lighten(20) },
     Include     { PreProc }, --  preprocessor #include
     Define      { PreProc }, --   preprocessor #define
@@ -168,6 +170,7 @@ local theme = lush(function()
 
     -- Error          { }, -- (preferred) any erroneous construct
 
+    URI { fg = blue_base, gui = 'underline' },
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
@@ -337,6 +340,66 @@ local theme = lush(function()
       CmpItemKindCopilot  { fg = u9 },
       CmpItemKindText     { fg = anthracite },
       CmpGhostText        { fg = turmstr },
+
+      typstMarkupReference { fg = color_04 },
+      typstMarkupLabel     { typstMarkupReference },
+      typstMarkupURL       { URI },
+      typstCommentBlock            { Comment },
+      typstCommentLine             { Comment },
+      typstCommentTodo             { Todo },
+      typstCodeConditional         { Conditional },
+      typstCodeRepeat              { Repeat },
+      typstCodeKeyword             { Keyword },
+      typstCodeStatement           { Statement },
+      typstCodeStatementWord       { fg = typstCodeStatement.fg.lighten(20), gui = typstCodeStatement.gui },
+      typstCodeConstant            { Constant },
+      typstCodeNumberInteger       { Number },
+      typstCodeNumberFloat         { Number },
+      typstCodeNumberLength        { Number },
+      typstCodeNumberAngle         { Number },
+      typstCodeNumberRatio         { Number },
+      typstCodeNumberFraction      { Number },
+      typstCodeString              { String },
+      typstCodeIdentifier          { Identifier },
+      typstCodeFieldAccess         { Identifier },
+      typstCodeFunction            { Function },
+      typstCodeFunctionArgument    { },
+      typstCodeParen               { Noise },
+      typstCodeBrace               { Noise },
+      typstCodeBracket             { Noise },
+      typstCodeDollar              { Noise },
+      typstHashtagConditional      { Conditional },
+      typstHashtagRepeat           { Repeat },
+      typstHashtagKeywords         { },
+      typstHashtagStatement        { },
+      typstHashtagControlFlowError { Error },
+      typstHashtagControlFlow      { Noise },
+      typstHashtagKeyword          { Keyword },
+      typstHashtagStatementWord    { Statement },
+      typstHashtagConstant         { Constant },
+      typstHashtagIdentifier       { Identifier },
+      typstHashtagFieldAccess      { Identifier },
+      typstHashtagFunction         { Function },
+      typstHashtagParen            { Noise },
+      typstHashtagBrace            { Noise },
+      typstHashtagBracket          { Noise },
+      typstHashtagDollar           { Noise },
+      typstMarkupRawInline         { Macro },
+      typstMarkupRawBlock          { Macro },
+      typstMarkupHeading           { Title },
+      typstMarkupBulletList        { Normal },
+      typstMarkupEnumList          { Normal },
+      typstMarkupBold              { gui='bold' },
+      typstMarkupItalic            { gui='italic' },
+      typstMarkupLinebreak         { Noise },
+      typstMarkupNonbreakingSpace  { Whitespace },
+      typstMarkupShy               { Constant },
+      typstMarkupDash              { Constant },
+      typstMarkupEllipsis          { Constant },
+      typstMarkupTermList          { Constant },
+      typstMarkupItalicDelimiter   { Noise },
+      typstMarkupBoldDelimiter     { Noise },
+      typstMarkupDollar            { Noise },
   }
 end)
 
