@@ -110,10 +110,10 @@ local theme = lush(function()
     Question      { }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine  { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     SpecialKey    { fg = bvg_yellow }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    SpellBad      { fg = red_base , gui = "underline" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap      { fg = orange_base , gui = "underline" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal    { fg = green_base , gui = "underline" }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare     { fg = blue_base , gui = "underline" }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellBad      { bg = magenta.darken(50) }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap      { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal    { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare     { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     VisualNOS     { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg    { }, -- warning messages
     WildMenu      { DiffDelete }, -- current match in 'wildmenu' completion
