@@ -115,7 +115,7 @@ local theme = lush(function()
     SpellLocal    { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare     { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     VisualNOS     { }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg    { }, -- warning messages
+    WarningMsg    { bg = orange_base.darken(40), fg = Error.fg }, -- warning messages
     WildMenu      { DiffDelete }, -- current match in 'wildmenu' completion
 
     -- Code and markup
