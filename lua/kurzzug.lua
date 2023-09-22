@@ -400,6 +400,16 @@ local theme = lush(function()
       typstMarkupItalicDelimiter   { Noise },
       typstMarkupBoldDelimiter     { Noise },
       typstMarkupDollar            { Noise },
+      DapUINormal { Normal },
+      DapUIVariable { Normal },
+      DapUIValue { Normal },
+      DapUIFrameName { Normal },
+      DapUILineNumber { fg = turmstr.lighten(20) , bg = turmstr.darken(70) },
+      DapUIFloatNormal { NormalFloat },
+      DapUIBreakpointsLine { DapUILineNumber },
+      DapUICurrentFrameName { DapUIBreakpointsCurrentLine },
+      DapUIEndofBuffer { EndOfBuffer },
+      DapUINormalNC { Normal },
   }
 end)
 
