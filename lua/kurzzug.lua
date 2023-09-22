@@ -85,6 +85,8 @@ local theme = lush(function()
     Folded        { Whitespace }, -- line used for closed folds
     NonText       { Whitespace }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 
+    Noise { fg = Whitespace.fg.lighten(60) },
+
     -- More default stuff:
     Directory     { }, -- directory names (and other special names in listings)
     DiffAdd       { bg = green_base.darken(60) }, -- diff mode: Added line |diff.txt|
@@ -100,7 +102,7 @@ local theme = lush(function()
     Substitute    { }, -- |:substitute| replacement text highlighting
     MatchParen    { fg = turmstr }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg       { fg = inactive_display_text }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea       { }, -- Area for messages and cmdline
+    MsgArea       { Noise }, -- Area for messages and cmdline
     MsgSeparator  { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg       { }, -- |more-prompt|
     Pmenu         { bg = NormalFloat.bg , fg = inactive_display_text }, -- Popup menu: normal item.
@@ -144,8 +146,6 @@ local theme = lush(function()
     StorageClass{ fg = Type.fg }, -- static, register, volatile, etc.
     Structure   { fg = Type.fg.darken(20) }, --  struct, union, enum, etc.
     Typedef     { fg = Type.fg.darken(20), gui = 'bold' }, --  A typedef
-
-    Noise { fg = Whitespace.fg.lighten(60) },
 
     PreProc     { fg = color_08.lighten(20) },
     Include     { PreProc }, --  preprocessor #include
