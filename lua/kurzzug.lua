@@ -305,7 +305,36 @@ local theme = lush(function()
       -- fugitiveStagedHeading    {},
       -- fugitiveStagedSection    {},
 
-      -- WhichKey
+      -- gitsigns
+      GitSignsAdd                {DiffAdd}, -- Used for the text of 'add' signs.
+      GitSignsChange             {DiffChange}, -- Used for the text of 'change' signs.
+      GitSignsDelete             {DiffDelete}, -- Used for the text of 'delete' signs.
+      GitSignsChangedelete       {GitSignsChange}, -- Used for the text of 'changedelete' signs.
+      GitSignsTopdelete          {GitSignsDelete}, -- Used for the text of 'topdelete' signs.
+      GitSignsUntracked          {GitSignsAdd}, -- Used for the text of 'untracked' signs.
+      GitSignsAddNr              {GitSignsAdd}, -- Used for number column (when `config.numhl == true`) of 'add' signs.
+      GitSignsChangeNr           {GitSignsChange}, -- Used for number column (when `config.numhl == true`) of 'change' signs.
+      GitSignsDeleteNr           {GitSignsDelete}, -- Used for number column (when `config.numhl == true`) of 'delete' signs.
+      GitSignsChangedeleteNr     {GitSignsChangeNr}, -- Used for number column (when `config.numhl == true`) of 'changedelete' signs.
+      GitSignsTopdeleteNr        {GitSignsDeleteNr}, -- Used for number column (when `config.numhl == true`) of 'topdelete' signs.
+      GitSignsUntrackedNr        {GitSignsAddNr}, -- Used for number column (when `config.numhl == true`) of 'untracked' signs.
+      GitSignsAddLn              {DiffAdd}, -- Used for buffer line (when `config.linehl == true`) of 'add' signs.
+      GitSignsChangeLn           {DiffChange}, -- Used for buffer line (when `config.linehl == true`) of 'change' signs.
+      GitSignsChangedeleteLn     {GitSignsChangeLn}, -- Used for buffer line (when `config.linehl == true`) of 'changedelete' signs.
+      GitSignsUntrackedLn        {GitSignsAddLn}, -- Used for buffer line (when `config.linehl == true`) of 'untracked' signs.
+      GitSignsAddPreview         {DiffAdd}, -- Used for added lines in previews.
+      GitSignsDeletePreview      {DiffDelete}, -- Used for deleted lines in previews.
+      GitSignsCurrentLineBlame   {NonText}, -- Used for current line blame.
+      GitSignsAddInline          {TermCursor}, -- Used for added word diff regions in inline previews.
+      GitSignsDeleteInline       {TermCursor}, -- Used for deleted word diff regions in inline previews.
+      GitSignsChangeInline       {TermCursor}, -- Used for changed word diff regions in inline previews.
+      GitSignsAddLnInline        {GitSignsAddInline}, -- Used for added word diff regions when `config.word_diff == true`.
+      GitSignsChangeLnInline     {GitSignsChangeInline}, -- Used for changed word diff regions when `config.word_diff == true`.
+      GitSignsDeleteLnInline     {GitSignsDeleteInline}, -- Used for deleted word diff regions when `config.word_diff == true`.
+      GitSignsDeleteVirtLn       {DiffDelete}, -- Used for deleted lines shown by inline `preview_hunk_inline()` or `show_deleted()`.
+      GitSignsDeleteVirtLnInLine {GitSignsDeleteLnInline}, -- Used for word diff regions in lines shown by inline `preview_hunk_inline()` or `show_deleted()`.
+      GitSignsVirtLnum           {GitSignsDeleteVirtLn}, -- Used for line numbers in inline hunks previews.
+
       WhichKey          { gui = "bold" },
       WhichKeySeperator { Pmenu },
       WhichKeyGroup     { Pmenu , gui = "italic" },
