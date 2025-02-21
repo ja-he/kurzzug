@@ -74,6 +74,18 @@ highlight DapUIWinSelect guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Delimiter guifg=#58606F guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @punctuation.delimiter Delimiter
 highlight! link @puncuation.special Delimiter
+highlight DiagnosticFloatingError guifg=#D9A6A6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticFloatingHint guifg=#B7D9A6 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticFloatingInformation guifg=#A6BFD9 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticFloatingWarning guifg=#E6CC99 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=#C27070 blend=NONE gui=undercurl
+highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=#8BC270 blend=NONE gui=underdashed
+highlight DiagnosticUnderlineInformation guifg=NONE guibg=NONE guisp=#7099C2 blend=NONE gui=underline
+highlight DiagnosticUnderlineWarning guifg=NONE guibg=NONE guisp=#D6AD5C blend=NONE gui=undercurl
+highlight DiagnosticVirtualTextError guifg=#D9A6A6 guibg=#471F1F guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticVirtualTextHint guifg=#B7D9A6 guibg=#2C471F guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticVirtualTextInformation guifg=#A6BFD9 guibg=#1F3347 guisp=NONE blend=NONE gui=NONE
+highlight DiagnosticVirtualTextWarning guifg=#E6CC99 guibg=#523D14 guisp=NONE blend=NONE gui=NONE
 highlight DiffAdd guifg=NONE guibg=#2C471F guisp=NONE blend=NONE gui=NONE
 highlight! link GitSignsAdd DiffAdd
 highlight! link GitSignsAddLn DiffAdd
@@ -135,18 +147,6 @@ highlight! link typstCodeKeyword Keyword
 highlight! link typstHashtagKeyword Keyword
 highlight! link @keyword Keyword
 highlight LineNr guifg=#5B4D34 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsFloatingError guifg=NONE guibg=#471F1F guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsFloatingHint guifg=NONE guibg=#2C471F guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsFloatingInformation guifg=NONE guibg=#1F3347 guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsFloatingWarning guifg=NONE guibg=#523D14 guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsUnderlineError guifg=#813737 guibg=NONE guisp=NONE blend=NONE gui=underline
-highlight LspDiagnosticsUnderlineHint guifg=#508137 guibg=NONE guisp=NONE blend=NONE gui=underline
-highlight LspDiagnosticsUnderlineInformation guifg=#375C81 guibg=NONE guisp=NONE blend=NONE gui=underline
-highlight LspDiagnosticsUnderlineWarning guifg=#936E25 guibg=NONE guisp=NONE blend=NONE gui=underline
-highlight LspDiagnosticsVirtualTextError guifg=#471F1F guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextHint guifg=#2C471F guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextInformation guifg=#1F3347 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight LspDiagnosticsVirtualTextWarning guifg=#523D14 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspReferenceRead guifg=#C27070 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspReferenceText guifg=#C27070 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspReferenceWrite guifg=#C27070 guibg=NONE guisp=NONE blend=NONE gui=NONE
